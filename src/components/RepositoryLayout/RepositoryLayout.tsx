@@ -1,37 +1,45 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import RepositoryList from "../RepositoryList/RepositoryList";
 import SearchBar from "../SearchBar/SearchBar";
-import GitHubDataContext from "../../context/GitHubDataContext"
+import GitHubDataContext from "../../context/GitHubDataContext";
 import { fetchDataFromGitHub } from "../../logic/GitHubAPICall";
-
+import DropdownButton from "../DropdownButton/DropwdownButton";
 
 function RepositoryLayout() {
-    var username = "EricSalat"
+    const username = "EricSalat";
     const [repositories, setRepositories] = useState<any[]>([]);
     const [searchTerm, setSearchTerm] = useState<string>("");
-
-
+    const [selectedLanguage, setSelectedLanguage] = useState<string>("");
 
     useEffect(() => {
         fetchDataFromGitHub(username)
-        .then((data) => setRepositories(data))
-        .catch((error) => 
-            console.error("Error fetching the data: ", error));
-        }, []);
-        
-    console.log(searchTerm);
-        
-    return(
+            .then((data) => setRepositories(data))
+            .catch((error) => console.error("Error fetching the data: ", error));
+    }, []);
+
+    const handleLanguageSelect = (language: string) => {
+        setSelectedLanguage(language);
+    };
+
+    return (
         <GitHubDataContext.Provider value={{ repositories }}>
             <div>
-                <SearchBar 
+                <SearchBar
+                    searchTerm={searchTerm}
+                    onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
+                        setSearchTerm(event.target.value)
+                    }
+                />
+                <DropdownButton 
+                    onLanguageSelect={handleLanguageSelect} 
+                />
+                <RepositoryList 
                     searchTerm={searchTerm} 
-                    onChange={(event: React.ChangeEvent<HTMLInputElement>) => setSearchTerm(event.target.value)} />
-                <RepositoryList searchTerm={searchTerm} />
+                    selectedLanguage={selectedLanguage} 
+                />
             </div>
         </GitHubDataContext.Provider>
     );
-
 }
 
 export default RepositoryLayout;

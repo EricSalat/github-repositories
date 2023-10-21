@@ -2,27 +2,36 @@ import { useContext } from "react";
 import GitHubDataContext from "../../context/GitHubDataContext";
 import Repository from "../Repository/Repository";
 
-function RepositoryList({ searchTerm }: { searchTerm: string }) {
+interface RepositoryListProps {
+    searchTerm: string;
+    selectedLanguage: string;
+}
+
+const RepositoryList: React.FC<RepositoryListProps> = ({ searchTerm, selectedLanguage }) => {
     const { repositories } = useContext(GitHubDataContext);
 
-    //Filter repositories based on search term
+    const filteredRepositories = repositories.filter((repository) => {
+        const nameMatch = repository.name.toLowerCase().includes(searchTerm.trimStart().toLowerCase());
+        const languageMatch = !selectedLanguage || repository.language === selectedLanguage;
+        return nameMatch && languageMatch;
+    });
 
-    const filteredRepositories = repositories.filter((repository) =>
-        repository.name.toLowerCase().includes(searchTerm.trimStart().toLowerCase())
-    );
-   
-    
-    return(
+    return (
         <div className="">
             {filteredRepositories.length > 0 ? (
                 filteredRepositories.map((repository) => (
                     <Repository key={repository.id} repository={repository} />
                 ))
             ) : (
-                <p>There are 0 repositories matching your search <span style={{fontWeight: "bold"}}>"{searchTerm}"</span></p>
-            )}      
+                <p>Ninguna coincidencia</p>
+            )}
         </div>
-    )
-}
+    );
+};
 
 export default RepositoryList;
+
+
+
+
+
