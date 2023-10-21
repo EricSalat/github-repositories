@@ -1,15 +1,16 @@
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.css';
-import RepositoryList from './components/Repository/Repository';
+import RepositoryLayout from './components/RepositoryLayout/RepositoryLayout';
+import GitHubDataContext from './GitHubDataContext';
 
 
 function App() {
 
   return (
     <div className="container">
-     <RepositoryList />
-     {/* <RepositoryList /> */}
-        
+     
+     <RepositoryLayout />
+      
     </div>
   )
 }
