@@ -1,0 +1,20 @@
+/*Import normalize library to unify the default css in all the browsers*/
+@import "../node_modules/normalize.css/normalize.css";
+
+/*Import Open Sans font*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --background:#b8e2f2;
+  --repo-names: #1e76dd;
+  --text:#373a3f;
+  --secondaryText: #656d76;
+}
