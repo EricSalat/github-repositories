@@ -9,7 +9,7 @@ interface RepositoryProps {
         visibility: string;
         description: string;
         updated_at: string;
-        language: string;
+        language: string | null ;
     };
 }
 
@@ -23,9 +23,9 @@ function Repository({ repository }: RepositoryProps) {
           <span className="repo-visibility">{repository.visibility}</span>
         </div>
         <p className="repo-description">Descripcion of the project {repository.description}</p>
-        <div className="d-flex align-items-baseline">
-          <RepositoryLanguage />
-          <p className="repo-update mx-2">Updated at {repository.updated_at}</p>
+        <div className="d-flex">
+          <RepositoryLanguage language={repository.language}/>
+          <p className="repo-update">Updated at {repository.updated_at}</p>
         </div>
       </div>
     );
