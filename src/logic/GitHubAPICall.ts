@@ -11,7 +11,7 @@ export async function fetchDataFromGitHub(username: string) {
     return response.data; // Returns the data as-is
 
   } catch (error) {
-    console.error("Error al realizar la llamada a la API:", error);
+    console.error("Error when making the API call:", error);
     throw error;
   }
 }

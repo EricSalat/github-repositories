@@ -1,9 +1,15 @@
+import { useContext } from "react";
+import GitHubDataContext from "../../context/GitHubDataContext";
 import Repository from "../Repository/Repository";
 
 function RepositoryList() {
+    const repositories = useContext(GitHubDataContext);
+   
     return(
         <div className="">
-            <Repository />        
+            {repositories.map((repo) => (
+                <Repository key={repo.id} data={repo} />
+            ))}        
         </div>
     )
 }
