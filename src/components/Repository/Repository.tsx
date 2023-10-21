@@ -1,6 +1,5 @@
 import "./Repository.css";
 import RepositoryLanguage from "./RepositoryLanguage";
-// import GitHubRepositoryData from "../../context/GitHubDataContext";
 
 interface RepositoryProps {
     repository: {
@@ -16,8 +15,7 @@ interface RepositoryProps {
 
 function Repository({ repository }: RepositoryProps) {
 
-    const visibilityText =
-    repository.visibility === "public" ? "Public" : "Private";
+    const visibilityText = repository.visibility === "public" ? "Public" : "Private";
 
     return (
       <div className="repo-layout d-flex flex-column py-4 ps-2" key={repository.id}>

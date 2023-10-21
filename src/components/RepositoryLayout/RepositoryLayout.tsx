@@ -8,6 +8,8 @@ import { fetchDataFromGitHub } from "../../logic/GitHubAPICall";
 function RepositoryLayout() {
     var username = "EricSalat"
     const [repositories, setRepositories] = useState<any[]>([]);
+    const [searchTerm, setSearchTerm] = useState<string>("");
+
 
 
     useEffect(() => {
@@ -15,17 +17,21 @@ function RepositoryLayout() {
         .then((data) => setRepositories(data))
         .catch((error) => 
             console.error("Error fetching the data: ", error));
-    }, []);
-
-
+        }, []);
+        
+    console.log(searchTerm);
+        
     return(
         <GitHubDataContext.Provider value={{ repositories }}>
             <div>
-                <SearchBar />
-                <RepositoryList />
+                <SearchBar 
+                    searchTerm={searchTerm} 
+                    onChange={(event: React.ChangeEvent<HTMLInputElement>) => setSearchTerm(event.target.value)} />
+                <RepositoryList searchTerm={searchTerm} />
             </div>
         </GitHubDataContext.Provider>
     );
+
 }
 
 export default RepositoryLayout;

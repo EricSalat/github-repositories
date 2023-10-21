@@ -17,6 +17,4 @@ interface GitHubRepositoryData {
   
   const GitHubDataContext = createContext<GitHubDataContextType>({ repositories: [] });
   
-
-  
   export default GitHubDataContext;
