@@ -11,7 +11,7 @@ function SearchBar({ searchTerm, onChange }: SearchBarProps) {
             <input
                 className="search-input"
                 type="text"
-                placeholder="Buscar por nombre"
+                placeholder="Search by name..."
                 value={searchTerm}
                 onChange={onChange}
             />

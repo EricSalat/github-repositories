@@ -8,7 +8,7 @@ function RepositoryList({ searchTerm }: { searchTerm: string }) {
     //Filter repositories based on search term
 
     const filteredRepositories = repositories.filter((repository) =>
-        repository.name.toLowerCase().includes(searchTerm.toLowerCase())
+        repository.name.toLowerCase().includes(searchTerm.trimStart().toLowerCase())
     );
    
     
