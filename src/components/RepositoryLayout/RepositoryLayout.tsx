@@ -18,7 +18,6 @@ function RepositoryLayout() {
     }, []);
 
 
-
     return(
         <GitHubDataContext.Provider value={{ repositories }}>
             <div>

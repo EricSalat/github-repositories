@@ -1,19 +1,31 @@
 import "./Repository.css";
 import RepositoryLanguage from "./RepositoryLanguage";
+// import GitHubRepositoryData from "../../context/GitHubDataContext";
 
-function Repository({ data }) {
+interface RepositoryProps {
+    repository: {
+        id: number;
+        name: string;
+        visibility: string;
+        description: string;
+        updated_at: string;
+        language: string;
+    };
+}
+
+function Repository({ repository }: RepositoryProps) {
     return (
-      <div className="repo-layout d-flex flex-column py-4 ps-2">
+      <div className="repo-layout d-flex flex-column py-4 ps-2" key={repository.id}>
         <div className="d-flex align-items-center">
           <h2 className="repo-title">
-            <a href={data.html_url}>{data.name}</a>
+            <a href="">{repository.name}</a>
           </h2>
-          <span className="repo-visibility">{data.private ? "Private" : "Public"}</span>
+          <span className="repo-visibility">{repository.visibility}</span>
         </div>
-        <p className="repo-description">{data.description}</p>
+        <p className="repo-description">Descripcion of the project {repository.description}</p>
         <div className="d-flex align-items-baseline">
-          <RepositoryLanguage language={data.language} />
-          <p className="repo-update mx-2">Updated {data.updated_at}</p>
+          <RepositoryLanguage />
+          <p className="repo-update mx-2">Updated at {repository.updated_at}</p>
         </div>
       </div>
     );

@@ -1,5 +1,4 @@
 import { createContext } from 'react';
-// import { GitHubRepositoryData } from "../logic/GitHubRepositoryData.ts"; 
 
 interface GitHubRepositoryData {
     id: number;
@@ -9,12 +8,15 @@ interface GitHubRepositoryData {
     private: boolean;
     language: string;
     updated_at: string;
+    visibility: string;
   }
 
-interface GitHubDataContextType {
-  repositories: any[]; // Arreglar el tipado más tarde
-}
+  interface GitHubDataContextType {
+    repositories: GitHubRepositoryData[];
+  }
+  
+  const GitHubDataContext = createContext<GitHubDataContextType>({ repositories: [] });
+  
 
-const GitHubDataContext = createContext<GitHubDataContextType>({ repositories: [] });
-
-export default GitHubDataContext;
+  
+  export default GitHubDataContext;
