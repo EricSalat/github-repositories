@@ -1,16 +1,16 @@
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import RepositoryList from './components/Repository/Repository';
 
 
 function App() {
 
-
   return (
-    <>
-     
+    <div className="container">
+     <RepositoryList />
+     {/* <RepositoryList /> */}
         
-    </>
+    </div>
   )
 }
 
