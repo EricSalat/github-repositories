@@ -1,7 +1,7 @@
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.css';
 import RepositoryLayout from './components/RepositoryLayout/RepositoryLayout';
-import GitHubDataContext from './GitHubDataContext';
+import GitHubDataContext from './context/GitHubDataContext';
 
 
 function App() {
@@ -9,7 +9,9 @@ function App() {
   return (
     <div className="container">
      
-     <RepositoryLayout />
+     <GitHubDataContext.Provider value={{ repositories }}>
+       <RepositoryLayout />
+     </GitHubDataContext.Provider>
       
     </div>
   )
