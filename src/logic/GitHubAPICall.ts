@@ -1,7 +1,7 @@
 import { Octokit } from "octokit";
 
 export async function fetchDataFromGitHub(username: string) {
-  const octokit = new Octokit({ auth: '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' });
+  const octokit = new Octokit({ auth: import.meta.env.VITE_MY_TOKEN });
 
   try {
     const response = await octokit.request('GET /users/{username}/repos', {
