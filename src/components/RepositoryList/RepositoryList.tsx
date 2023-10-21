@@ -5,17 +5,22 @@ import Repository from "../Repository/Repository";
 function RepositoryList({ searchTerm }: { searchTerm: string }) {
     const { repositories } = useContext(GitHubDataContext);
 
-    // Filtrar los repositorios basados en el término de búsqueda
+    //Filter repositories based on search term
 
     const filteredRepositories = repositories.filter((repository) =>
         repository.name.toLowerCase().includes(searchTerm.toLowerCase())
     );
    
+    
     return(
         <div className="">
-            {filteredRepositories.map((repository) => (
-                <Repository key={repository.id} repository={repository} />
-            ))}        
+            {filteredRepositories.length > 0 ? (
+                filteredRepositories.map((repository) => (
+                    <Repository key={repository.id} repository={repository} />
+                ))
+            ) : (
+                <p>There are 0 repositories matching your search <span style={{fontWeight: "bold"}}>"{searchTerm}"</span></p>
+            )}      
         </div>
     )
 }
