@@ -10,10 +10,15 @@ function RepositoryLayout() {
     const [repositories, setRepositories] = useState<any[]>([]);
     const [searchTerm, setSearchTerm] = useState<string>("");
     const [selectedLanguage, setSelectedLanguage] = useState<string>("");
+    const [dataIsLoading, setDataIsLoading] = useState(false)
+
 
     useEffect(() => {
         fetchDataFromGitHub(username)
-            .then((data) => setRepositories(data))
+            .then((data) => {
+                setRepositories(data);
+                setDataIsLoading(true);
+            })
             .catch((error) => console.error("Error fetching the data: ", error));
     }, []);
 
@@ -35,7 +40,9 @@ function RepositoryLayout() {
                 />
                 <RepositoryList 
                     searchTerm={searchTerm} 
-                    selectedLanguage={selectedLanguage} 
+                    selectedLanguage={selectedLanguage}
+                    dataIsLoading={dataIsLoading}
+
                 />
             </div>
         </GitHubDataContext.Provider>
