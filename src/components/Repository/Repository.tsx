@@ -9,6 +9,7 @@ interface RepositoryProps {
         description: string;
         updated_at: string;
         language: string | null ;
+        html_url: string;
     };
 }
 
@@ -29,10 +30,10 @@ function Repository({ repository }: RepositoryProps) {
     const formattedUpdatedAt = getFormattedDate(repository.updated_at);
 
     return (
-      <div className="repo-layout d-flex flex-column py-4 ps-2" key={repository.id}>
-        <div className="d-flex align-items-center">
+      <div className="repo-layout d-flex flex-column m-4 py-4 ps-4" key={repository.id}>
+        <div className="d-flex align-items-center pt-2">
           <h2 className="repo-title">
-            <a href="">{repository.name}</a>
+            <a href={repository.html_url} target="_blank">{repository.name}</a>
           </h2>
           <span className="repo-visibility">
             {visibilityText}

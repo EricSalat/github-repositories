@@ -1,8 +1,8 @@
 /*Import normalize library to unify the default css in all the browsers*/
 @import "../node_modules/normalize.css/normalize.css";
 
-/*Import Open Sans font*/
-  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+/*Import Open Sans and Inter font*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Open+Sans:wght@300;400;500;600;700&display=swap');
 
 
 
@@ -18,8 +18,13 @@
   --repo-names: #1e76dd;
   --text:#373a3f;
   --secondaryText: #656d76;
+  /* --mainFont: 'Open Sans', sans-serif; */
+  --mainFont: 'Inter', sans-serif;
+  --mainBackground: #F9F9F9;
+  --headerBackground: #282828;
 }
 
 p, summary {
-  font-family: 'Open Sans', sans-serif;
+  font-family: var(--mainFont);
+  font-weight: 500;
 }

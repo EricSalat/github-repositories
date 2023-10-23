@@ -21,7 +21,7 @@ const RepositoryList: React.FC<RepositoryListProps> = ({ searchTerm, selectedLan
     return (
         <div className="">
           {!dataIsLoading ? (
-            <p>Loading data...</p>
+            <p className="ps-4">Loading data...</p>
           ) : (
             <>
               {filteredRepositories.length > 0 ? (
@@ -50,7 +50,7 @@ const RepositoryList: React.FC<RepositoryListProps> = ({ searchTerm, selectedLan
                   <Repository key={repository.id} repository={repository} />
                 ))
               ) : (
-                <p>No matches</p>
+                <p className="ps-4">No matches</p>
               )}
             </>
           )}

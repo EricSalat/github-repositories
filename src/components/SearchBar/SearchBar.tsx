@@ -7,8 +7,8 @@ interface SearchBarProps {
 
 function SearchBar({ searchTerm, onChange }: SearchBarProps) {
     return (
-        <div className="bg-warning">
-            <div className="search-box bg-primary">
+
+            <div className="search-box">
                 <input
                     className="search-input"
                     type="text"
@@ -17,7 +17,7 @@ function SearchBar({ searchTerm, onChange }: SearchBarProps) {
                     onChange={onChange}
                 />
             </div>
-        </div>
+
     );
 }
 

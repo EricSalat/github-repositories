@@ -14,7 +14,7 @@ const DropdownButton: React.FC<DropdownButtonProps> = ({ onLanguageSelect }) => 
     };
 
     return (
-        <div className="text-center">
+        <div className="text-center d-flex align-self-center ps-4">
             <div className="btn-group">
                 <button type="button" className="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                     Languages

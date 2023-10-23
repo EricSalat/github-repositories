@@ -7,6 +7,7 @@ import { fetchDataFromGitHub } from "../../logic/GitHubAPICall";
 import DropdownButton from "../DropdownButton/DropdownButton";
 import Header from "../Header/Header";
 import SearchLayout from "../SearchLayout/SearchLayout";
+import "./RepositoryLayout.css";
 
 function RepositoryLayout() {
     const [username, setUsername] = useState<string>("EricSalat");
@@ -14,6 +15,8 @@ function RepositoryLayout() {
     const [searchTerm, setSearchTerm] = useState<string>("");
     const [selectedLanguage, setSelectedLanguage] = useState<string>("");
     const [dataIsLoading, setDataIsLoading] = useState(false)
+    
+    var repositoriesAmount = repositories.length;
 
 
     useEffect(() => {
@@ -29,31 +32,30 @@ function RepositoryLayout() {
         setSelectedLanguage(language);
     };
 
-    useEffect(() => {
-        console.log("El username ha cambiado a: ", username);
-      }, [username]);
-
     return (
         <GitHubDataContext.Provider value={{ repositories }}>
             <div>
-                
                 <SearchUser 
                     onSubmit={(newUsername) => {
                         setUsername(newUsername); // Actualizar el estado username en RepositoryLayout
                       }}
                 />
-                <Header />
-                <SearchLayout
-                    searchTerm={searchTerm}
-                    onChangeSearchTerm={(newSearchTerm) => setSearchTerm(newSearchTerm)}
-                    onLanguageSelect={handleLanguageSelect}
-                />
-                <RepositoryList 
-                    searchTerm={searchTerm} 
-                    selectedLanguage={selectedLanguage}
-                    dataIsLoading={dataIsLoading}
-
-                />
+                <div className="repository-layout">
+                    <Header
+                        username={username}
+                        repositoriesAmount={repositoriesAmount}
+                    />
+                    <SearchLayout
+                        searchTerm={searchTerm}
+                        onChangeSearchTerm={(newSearchTerm) => setSearchTerm(newSearchTerm)}
+                        onLanguageSelect={handleLanguageSelect}
+                    />
+                    <RepositoryList
+                        searchTerm={searchTerm}
+                        selectedLanguage={selectedLanguage}
+                        dataIsLoading={dataIsLoading}
+                    />
+                </div>
             </div>
         </GitHubDataContext.Provider>
     );

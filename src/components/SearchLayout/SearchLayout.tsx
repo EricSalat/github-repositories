@@ -1,6 +1,7 @@
 import { ChangeEvent } from "react";
 import SearchBar from "../SearchBar/SearchBar";
 import DropdownButton from "../DropdownButton/DropdownButton";
+import "./SearchLayout.css"
 
 interface SearchLayoutProps {
     searchTerm: string;
@@ -19,7 +20,7 @@ interface SearchLayoutProps {
     };
   
     return (
-      <div className="d-flex justify-content-between">
+      <div className="search-layout d-flex justify-content-start m-4">
         <SearchBar searchTerm={searchTerm} onChange={handleSearchInputChange} />
         <DropdownButton onLanguageSelect={onLanguageSelect} />
       </div>

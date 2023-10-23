@@ -1,8 +1,12 @@
 .repo-title {
-    color: var(--repo-names);
+    color: #6e24ff;
     font-size: 20px;
     font-weight: 600;
-    font-family: 'Open Sans', sans-serif;
+    font-family: var(--mainFont);
+}
+
+.repo-title a {
+    color: #6e24ff
 }
 
 .repo-description,
@@ -11,7 +15,7 @@
 .repo-visibility {
     color: var(--secondaryText);
     font-size: 12px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: var(--mainFont);
 }
 
 .repo-description {
@@ -37,7 +41,11 @@ a {
 }
 
 .repo-layout {
-    border: 1px solid var(--secondaryText);
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    border: solid 1px var(--headerBackground);
+    background-color: #fff;
+    box-shadow: var(--headerBackground) 5px 6px 0px 1px;
 }
 
 .repo-language {
