@@ -26,18 +26,18 @@ const RepositoryList: React.FC<RepositoryListProps> = ({ searchTerm, selectedLan
             <>
               {filteredRepositories.length > 0 ? (
                 searchTerm !== "" && selectedLanguage === "" ? (
-                  <p>
+                  <p className="ps-4">
                     {filteredRepositories.length} repositories found matching "<span style={{ fontWeight: "bold" }}>
                       {searchTerm}
                     </span>"
                   </p>
                 ) : searchTerm === "" && selectedLanguage !== "" ? (
-                  <p>
+                  <p className="ps-4">
                     {filteredRepositories.length} repositories found written in{" "}
                     <span style={{ fontWeight: "bold" }}>{selectedLanguage}</span>
                   </p>
                 ) : searchTerm !== "" && selectedLanguage !== "" ? (
-                  <p>
+                  <p className="ps-4">
                     {filteredRepositories.length} repositories found matching "<span style={{ fontWeight: "bold" }}>
                       {searchTerm}
                     </span>" written in <span style={{ fontWeight: "bold" }}>{selectedLanguage}</span>
