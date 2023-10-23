@@ -4,8 +4,9 @@ import SearchUser from "../SearchUser/SearchUser";
 import SearchBar from "../SearchBar/SearchBar";
 import GitHubDataContext from "../../context/GitHubDataContext";
 import { fetchDataFromGitHub } from "../../logic/GitHubAPICall";
-import DropdownButton from "../DropdownButton/DropwdownButton";
+import DropdownButton from "../DropdownButton/DropdownButton";
 import Header from "../Header/Header";
+import SearchLayout from "../SearchLayout/SearchLayout";
 
 function RepositoryLayout() {
     const [username, setUsername] = useState<string>("EricSalat");
@@ -42,14 +43,10 @@ function RepositoryLayout() {
                       }}
                 />
                 <Header />
-                <SearchBar
+                <SearchLayout
                     searchTerm={searchTerm}
-                    onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
-                        setSearchTerm(event.target.value)
-                    }
-                />
-                <DropdownButton 
-                    onLanguageSelect={handleLanguageSelect} 
+                    onChangeSearchTerm={(newSearchTerm) => setSearchTerm(newSearchTerm)}
+                    onLanguageSelect={handleLanguageSelect}
                 />
                 <RepositoryList 
                     searchTerm={searchTerm} 
