@@ -35,7 +35,7 @@ const RepositoryList: React.FC<RepositoryListProps> = ({ searchTerm, setSearchTe
             <>
               {filteredRepositories.length > 0 ? (
                 searchTerm !== "" && selectedLanguage === "" ? (
-                  <div className="d-flex align-items-baseline">
+                  <div className="d-block d-sm-flex align-items-baseline">
                     <p className="ps-4">
                       {filteredRepositories.length} repositories found matching "<span style={{ fontWeight: "bold" }}>
                         {searchTerm}
@@ -45,7 +45,7 @@ const RepositoryList: React.FC<RepositoryListProps> = ({ searchTerm, setSearchTe
 
                   </div>
                 ) : searchTerm === "" && selectedLanguage !== "" ? (
-                  <div className="d-flex align-items-baseline">
+                  <div className="d-block d-sm-flex align-items-baseline">
                     <p className="ps-4">
                       {filteredRepositories.length} repositories found written in{" "}
                       <span style={{ fontWeight: "bold" }}>{selectedLanguage}</span>
@@ -54,7 +54,7 @@ const RepositoryList: React.FC<RepositoryListProps> = ({ searchTerm, setSearchTe
 
                   </div>
                 ) : searchTerm !== "" && selectedLanguage !== "" ? (
-                  <div className="d-flex align-items-baseline">
+                  <div className="d-block d-sm-flex align-items-baseline">
                     <p className="ps-4">
                       {filteredRepositories.length} repositories found matching "<span style={{ fontWeight: "bold" }}>
                         {searchTerm}
@@ -71,7 +71,7 @@ const RepositoryList: React.FC<RepositoryListProps> = ({ searchTerm, setSearchTe
                   <Repository key={repository.id} repository={repository} />
                 ))
               ) : (
-                <div className="d-flex align-items-baseline">
+                <div className="d-block d-sm-flex mb-4 mb-sm-1 align-items-baseline">
                   <p className="ps-4">No matches</p>
                   <ClearButton clearFilters={clearFilters} />
 
