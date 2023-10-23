@@ -1,0 +1,13 @@
+header {
+    background-color: var(--background2)
+}
+
+.header-username, .header-repositories {
+    margin-bottom: 0;
+    padding-left: 10px;
+}
+
+.header-username {
+    font-size: 16px;
+    font-weight: 600;
+}

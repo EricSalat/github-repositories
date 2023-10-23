@@ -15,17 +15,18 @@ function SearchUser({ onSubmit }: SearchUserProps) {
   
   
     return (
-    <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        placeholder="Search by username..."
-        value={inputValue}
-        onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
-            setInputValue(event.target.value)
-        }
-      />
-      <button type="submit">Submit</button>
-    </form>
+      <form onSubmit={handleSubmit} className="search-container">
+        <input
+          className="search-input"
+          type="text"
+          placeholder="Search by username..."
+          value={inputValue}
+          onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
+              setInputValue(event.target.value)
+          }
+        />
+        <button type="submit">Submit</button>
+      </form>
   );
 }
 

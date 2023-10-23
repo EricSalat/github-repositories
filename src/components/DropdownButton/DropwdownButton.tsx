@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import "./DropdownButton.css";
+import  { useState } from "react";
 
 interface DropdownButtonProps {
     onLanguageSelect: (language: string) => void;
@@ -13,37 +14,56 @@ const DropdownButton: React.FC<DropdownButtonProps> = ({ onLanguageSelect }) => 
     };
 
     return (
-        <details className="">
-            <summary>Languages</summary>
-            <ul>
-                <li>
-                    <a href="#" onClick={() => handleLanguageSelect("HTML")}>
-                        HTML
-                    </a>
-                    <a href="#" onClick={() => handleLanguageSelect("CSS")}>
-                        CSS
-                    </a>
-                    <a href="#" onClick={() => handleLanguageSelect("JavaScript")}>
-                        JavaScript
-                    </a>
-                    <a href="#" onClick={() => handleLanguageSelect("TypeScript")}>
-                        TypeScript
-                    </a>
-                    <a href="#" onClick={() => handleLanguageSelect("PHP")}>
-                        PHP
-                    </a>
-                    <a href="#" onClick={() => handleLanguageSelect("Java")}>
-                        Java
-                    </a>
-                    <a href="#" onClick={() => handleLanguageSelect("Python")}>
-                        Python
-                    </a>
-                    <a href="#" onClick={() => handleLanguageSelect("Go")}>
-                        Go
-                    </a>
-                </li>
-            </ul>
-        </details>
+        <div className="text-center">
+            <div className="btn-group">
+                <button type="button" className="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                    Languages
+                </button>
+                <ul className="dropdown-menu text-center">
+                    <li>
+                        <a className="dropdown-item" href="#" onClick={() => handleLanguageSelect("HTML")}>
+                            HTML
+                        </a>
+                    </li>
+                    <li>
+                        <a className="dropdown-item" href="#" onClick={() => handleLanguageSelect("CSS")}>
+                            CSS
+                        </a>
+                    </li>
+                    <li>
+                        <a className="dropdown-item" href="#" onClick={() => handleLanguageSelect("JavaScript")}>
+                            JavaScript
+                        </a>
+                    </li>
+                    <li>
+                        <a className="dropdown-item" href="#" onClick={() => handleLanguageSelect("TypeScript")}>
+                            TypeScript
+                        </a>
+                    </li>
+                    <li>
+                        <a className="dropdown-item" href="#" onClick={() => handleLanguageSelect("PHP")}>
+                            PHP
+                        </a>
+                    </li>
+                    <li>
+                        <a className="dropdown-item" href="#" onClick={() => handleLanguageSelect("Java")}>
+                            Java
+                        </a>
+                    </li>
+                    <li>
+                        <a className="dropdown-item" href="#" onClick={() => handleLanguageSelect("Python")}>
+                            Python
+                        </a>
+                    </li>
+                    <li>
+                        <a className="dropdown-item" href="#" onClick={() => handleLanguageSelect("Go")}>
+                            Go
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
     );
 };
 

@@ -5,6 +5,7 @@ import SearchBar from "../SearchBar/SearchBar";
 import GitHubDataContext from "../../context/GitHubDataContext";
 import { fetchDataFromGitHub } from "../../logic/GitHubAPICall";
 import DropdownButton from "../DropdownButton/DropwdownButton";
+import Header from "../Header/Header";
 
 function RepositoryLayout() {
     const [username, setUsername] = useState<string>("EricSalat");
@@ -40,6 +41,7 @@ function RepositoryLayout() {
                         setUsername(newUsername); // Actualizar el estado username en RepositoryLayout
                       }}
                 />
+                <Header />
                 <SearchBar
                     searchTerm={searchTerm}
                     onChange={(event: React.ChangeEvent<HTMLInputElement>) =>

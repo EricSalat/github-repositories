@@ -14,7 +14,12 @@
 
 :root {
   --background:#b8e2f2;
+  --background2: #dadada;
   --repo-names: #1e76dd;
   --text:#373a3f;
   --secondaryText: #656d76;
+}
+
+p, summary {
+  font-family: 'Open Sans', sans-serif;
 }
