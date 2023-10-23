@@ -1,0 +1,8 @@
+.clear-button {
+    background-color: var(--headerBackground);
+    border-color: var(--headerBackground);
+    color: #fff;
+    padding: 0 5px;
+    /* border-radius: 15px; */
+    width: fi-content;
+}

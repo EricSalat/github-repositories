@@ -20,7 +20,7 @@ interface SearchLayoutProps {
     };
   
     return (
-      <div className="search-layout d-flex justify-content-start m-4">
+      <div className="search-layout d-flex justify-content-start m -4">
         <SearchBar searchTerm={searchTerm} onChange={handleSearchInputChange} />
         <DropdownButton onLanguageSelect={onLanguageSelect} />
       </div>

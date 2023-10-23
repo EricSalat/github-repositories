@@ -1,10 +1,8 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import RepositoryList from "../RepositoryList/RepositoryList";
 import SearchUser from "../SearchUser/SearchUser";
-import SearchBar from "../SearchBar/SearchBar";
 import GitHubDataContext from "../../context/GitHubDataContext";
 import { fetchDataFromGitHub } from "../../logic/GitHubAPICall";
-import DropdownButton from "../DropdownButton/DropdownButton";
 import Header from "../Header/Header";
 import SearchLayout from "../SearchLayout/SearchLayout";
 import "./RepositoryLayout.css";
@@ -52,8 +50,11 @@ function RepositoryLayout() {
                     />
                     <RepositoryList
                         searchTerm={searchTerm}
+                        setSearchTerm={setSearchTerm}
                         selectedLanguage={selectedLanguage}
+                        setSelectedLanguage={setSelectedLanguage}
                         dataIsLoading={dataIsLoading}
+                        
                     />
                 </div>
             </div>

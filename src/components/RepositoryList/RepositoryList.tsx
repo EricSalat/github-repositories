@@ -1,22 +1,31 @@
 import { useContext} from "react";
 import GitHubDataContext from "../../context/GitHubDataContext";
 import Repository from "../Repository/Repository";
+import ClearButton from "./ClearButton";
+import "./RepositoryList.css";
+
 
 interface RepositoryListProps {
-    searchTerm: string;
-    selectedLanguage: string;
-    dataIsLoading: boolean;
+  searchTerm: string;
+  setSearchTerm: (searchTerm: string) => void;
+  selectedLanguage: string;
+  setSelectedLanguage: (selectedLanguage: string) => void;
+  dataIsLoading: boolean;
 }
 
-const RepositoryList: React.FC<RepositoryListProps> = ({ searchTerm, selectedLanguage, dataIsLoading}) => {
+const RepositoryList: React.FC<RepositoryListProps> = ({ searchTerm, setSearchTerm, selectedLanguage, setSelectedLanguage, dataIsLoading}) => {
     const { repositories } = useContext(GitHubDataContext);
-    // const [dataIsLoading, setDataIsLoading] = useState(false)
 
     const filteredRepositories = repositories.filter((repository) => {
         const nameMatch = repository.name.toLowerCase().includes(searchTerm.trimStart().toLowerCase());
         const languageMatch = !selectedLanguage || repository.language === selectedLanguage;
         return nameMatch && languageMatch;
     });
+
+    const clearFilters = () => {
+      setSearchTerm("");
+      setSelectedLanguage("");
+    };
 
     return (
         <div className="">
@@ -26,22 +35,34 @@ const RepositoryList: React.FC<RepositoryListProps> = ({ searchTerm, selectedLan
             <>
               {filteredRepositories.length > 0 ? (
                 searchTerm !== "" && selectedLanguage === "" ? (
-                  <p className="ps-4">
-                    {filteredRepositories.length} repositories found matching "<span style={{ fontWeight: "bold" }}>
-                      {searchTerm}
-                    </span>"
-                  </p>
+                  <div className="d-flex align-items-baseline">
+                    <p className="ps-4">
+                      {filteredRepositories.length} repositories found matching "<span style={{ fontWeight: "bold" }}>
+                        {searchTerm}
+                      </span>"
+                    </p>
+                    <ClearButton clearFilters={clearFilters} />
+
+                  </div>
                 ) : searchTerm === "" && selectedLanguage !== "" ? (
-                  <p className="ps-4">
-                    {filteredRepositories.length} repositories found written in{" "}
-                    <span style={{ fontWeight: "bold" }}>{selectedLanguage}</span>
-                  </p>
+                  <div className="d-flex align-items-baseline">
+                    <p className="ps-4">
+                      {filteredRepositories.length} repositories found written in{" "}
+                      <span style={{ fontWeight: "bold" }}>{selectedLanguage}</span>
+                    </p>
+                    <ClearButton clearFilters={clearFilters} />
+
+                  </div>
                 ) : searchTerm !== "" && selectedLanguage !== "" ? (
-                  <p className="ps-4">
-                    {filteredRepositories.length} repositories found matching "<span style={{ fontWeight: "bold" }}>
-                      {searchTerm}
-                    </span>" written in <span style={{ fontWeight: "bold" }}>{selectedLanguage}</span>
-                  </p>
+                  <div className="d-flex align-items-baseline">
+                    <p className="ps-4">
+                      {filteredRepositories.length} repositories found matching "<span style={{ fontWeight: "bold" }}>
+                        {searchTerm}
+                      </span>" written in <span style={{ fontWeight: "bold" }}>{selectedLanguage}</span>
+                    </p>
+                    <ClearButton clearFilters={clearFilters} />
+
+                  </div>
                 ) : null
               ) : null}
     
@@ -50,7 +71,11 @@ const RepositoryList: React.FC<RepositoryListProps> = ({ searchTerm, selectedLan
                   <Repository key={repository.id} repository={repository} />
                 ))
               ) : (
-                <p className="ps-4">No matches</p>
+                <div className="d-flex align-items-baseline">
+                  <p className="ps-4">No matches</p>
+                  <ClearButton clearFilters={clearFilters} />
+
+                </div>
               )}
             </>
           )}
