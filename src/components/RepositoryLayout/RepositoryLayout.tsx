@@ -7,6 +7,11 @@ import Header from "../Header/Header";
 import SearchLayout from "../SearchLayout/SearchLayout";
 import "./RepositoryLayout.css";
 
+
+/**
+ * Component responsible for rendering the repository layout and managing user input.
+ * @component
+ */
 function RepositoryLayout() {
     const [username, setUsername] = useState<string>("EricSalat");
     const [repositories, setRepositories] = useState<any[]>([]);
@@ -18,6 +23,10 @@ function RepositoryLayout() {
 
 
     useEffect(() => {
+        /**
+         * Fetch data from the GitHub API for the specified username and update the component state.
+         * @param {string} username - The GitHub username to fetch data for.
+         */
         fetchDataFromGitHub(username)
             .then((data) => {
                 setRepositories(data);
@@ -26,6 +35,10 @@ function RepositoryLayout() {
             .catch((error) => console.error("Error fetching the data: ", error));
     }, [username]);
 
+    /**
+     * Handles the selection of a programming language from the DropdownButton component for filtering repositories.
+     * @param {string} language - The selected programming language.
+     */
     const handleLanguageSelect = (language: string) => {
         setSelectedLanguage(language);
     };
@@ -60,8 +73,6 @@ function RepositoryLayout() {
             </div>
         </GitHubDataContext.Provider>
     );
-
-   
 }
 
 export default RepositoryLayout;

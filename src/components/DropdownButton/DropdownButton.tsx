@@ -6,7 +6,8 @@ interface DropdownButtonProps {
 }
 
 const DropdownButton: React.FC<DropdownButtonProps> = ({ onLanguageSelect }) => {
-    const [selectedLanguage, setSelectedLanguage] = useState<string>("");
+    // const [selectedLanguage, setSelectedLanguage] = useState<string>("");
+    const setSelectedLanguage = useState<string>("")[1];
 
     const handleLanguageSelect = (language: string) => {
         setSelectedLanguage(language);

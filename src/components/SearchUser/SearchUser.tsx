@@ -5,12 +5,25 @@ interface SearchUserProps {
   onSubmit: (newUsername: string) => void;
 }
 
+/**
+ * Component responsible for user input and searching by username.
+ * @param {object} props - The component's props.
+ * @param {function} props.onSubmit - A callback function to handle the submission of a username.
+ */
 function SearchUser({ onSubmit }: SearchUserProps) {
+    /**
+     * State for tracking the input value.
+     * @type {string}
+     */
     const [inputValue, setInputValue] = useState("");
 
+    /**
+     * Handles the form submission.
+     * @param {React.FormEvent} event - The form submission event.
+     */
     const handleSubmit = (event: React.FormEvent) => {
         event.preventDefault();
-        onSubmit(inputValue); // Enviar el valor introducido a la función onSubmit
+        onSubmit(inputValue);
       };
   
   
