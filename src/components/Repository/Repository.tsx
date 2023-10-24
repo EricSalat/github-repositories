@@ -8,14 +8,16 @@ import { RepositoryLanguage } from "./RepositoryLanguage";
  */
 interface RepositoryProps {
   repository: {
-    /** Unique identifier of the repository. */
+    /** 
+     * Unique identifier of the repository. 
+     */
     id: number;
     /** The name of the repository. */
     name: string;
     /** The visibility of the repository (public or private). */
     visibility: string;
     /** A brief description of the repository. */
-    description: string;
+    description: string | null;
     /** The last update date in ISO format. */
     updated_at: string;
     /** The primary language of the repository, or null if not specified. */
