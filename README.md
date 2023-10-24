@@ -1,27 +1,45 @@
-# React + TypeScript + Vite
+# GitHub Repositories
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a technical test for the Frontend Developer position at the MVST company. GitHub Repositories is a web application that allows you to search and view the GitHub repositories of a particular user. You can filter the results by the repository name and the main programming language they are written in.
 
-Currently, two official plugins are available:
+## Screenshot
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![Screenshot](path/to/image.png)
 
-## Expanding the ESLint configuration
+## Demo
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+You can try the application live at [this link](https://github-repositories-omega.vercel.app/).
 
-- Configure the top-level `parserOptions` property like this:
+## Features
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+- Search and filter GitHub repositories by user, name, and language.
+- User-friendly and easy-to-use interface.
+- Developed with React and bundled with Vite.
+- Components tested with Storybook to maintain high code quality.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Installation
+
+To run the project in your local environment, follow these steps:
+
+1. Clone this repository:
+
+   ```bash
+   git clone https://github.com/EricSalat/github-repositories.git
+
+2. Navigate to the project directory:
+
+   ```bash
+   cd github-repositories
+   ```
+
+3. Install the dependencies:
+
+   ```bash
+   npm install
+   ```
+
+3. Start the application:
+
+   ```bash
+   npm run start
+   ```
