@@ -2,13 +2,13 @@
 
 This project is a technical test for the Frontend Developer position at the MVST company. GitHub Repositories is a web application that allows you to search and view the GitHub repositories of a particular user. You can filter the results by the repository name and the main programming language they are written in.
 
-## Screenshot
+## Preview
 
-![Screenshot](path/to/image.png)
+![image](https://github.com/EricSalat/github-repositories/assets/70376693/987ebf4f-329b-43e3-8a57-b2426ada7298)
 
 ## Demo
 
-You can try the application live at [this link](https://github-repositories-omega.vercel.app/).
+You can try the application live at this link: (https://github-repositories-omega.vercel.app/).
 
 ## Features
 
