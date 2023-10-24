@@ -20,7 +20,7 @@ You can try the application live at this link: (https://github-repositories-omeg
 
 ## Developement
 
-The project is built with React, bundled with Vite, and the UI components that handle different states have been tested with Storybook.
+The project is built with React, bundled with Vite, the UI components that handle different states have been tested with Storybook, formatted with ESLint and deployed on Vercel from the same repository.
 The code includes comments following the JSDocs standard to improve code readability and facilitate understanding. The interface is user-friendly and easy to use. The UI, colors, and style are based on the Figma brand image.
 
 ## Installation
