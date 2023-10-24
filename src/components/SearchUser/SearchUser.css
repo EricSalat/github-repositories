@@ -4,18 +4,25 @@
 
 .search-input-user {
     background-color: #fff;
-    border: solid 1px var(--headerBackground);
+    border: solid 1px var(--auxiliarColor);
     font-size: 16px;
     padding: 10px 15px 10px 15px;
     height: 40px;
     
 }
+
 .submit-button {
     height: 40px;
     padding: 10px 15px 10px 15px;
-    border-color: #6e24ff;
+    border-color: var(--mainColor);
     border-style: solid;
     font-weight: 600;
     color: #fff;
-    background-color: #6e24ff;
+    background-color: var(--mainColor);
+}
+
+.submit-button:hover {
+    border: 1px solid grey;
+    background-color: transparent;
+    color: #000;
 }

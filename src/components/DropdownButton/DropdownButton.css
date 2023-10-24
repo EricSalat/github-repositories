@@ -2,15 +2,16 @@
     border: 1px solid grey;
     background-color: #fff;
     padding: 10px 15px 10px 15px;
-    border-color: #6e24ff;
+    border-color: var(--mainColor);
     border-style: solid;
     font-weight: 600;
     color: #fff;
-    background-color: #6e24ff;
+    background-color: var(--mainColor);
     border-radius: 0px;
 }
 .dropdown-toggle:hover {
-    border: 1px solid grey
+    border: 1px solid grey;
+    background-color: transparent;
 
 }
 
@@ -19,6 +20,6 @@
 }
 
 .dropdown-item:hover {
-    background-color: var(--headerBackground);
+    background-color: var(--auxiliarColor);
     color: #fff;
 }

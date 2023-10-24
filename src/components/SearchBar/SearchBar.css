@@ -1,10 +1,7 @@
 .search-box {
     background-color: #fff;
     min-width: 30vw;
-    /* padding: 10px; */
-    /* border-radius: 5px; */
-    /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); */
-    border: solid 1px var(--headerBackground);
+    border: solid 1px var(--auxiliarColor);
 }
 
 .search-input {

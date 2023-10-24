@@ -1,8 +1,10 @@
 .clear-button {
-    background-color: var(--headerBackground);
-    border-color: var(--headerBackground);
+    background-color: var(--auxiliarColor);
+    border-color: var(--auxiliarColor);
     color: #fff;
     padding: 0 5px;
-    /* border-radius: 15px; */
-    width: fi-content;
+}
+
+.clear-button:hover {
+    transition: transform 200ms,background 200ms;
 }

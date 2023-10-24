@@ -32,8 +32,8 @@ function Repository({ repository }: RepositoryProps) {
     const formattedUpdatedAt = getFormattedDate(repository.updated_at);
 
     return (
-      <div className="repo-layout d-flex flex-column m-4 py-4 ps-4" key={repository.id}>
-        <div className="d-flex align-items-center pt-2">
+      <div className="repo-layout d-flex flex-column m-4 p-4" key={repository.id}>
+        <div className="d-flex align-items-center pt-2 flex-wrap">
           <h2 className="repo-title">
             <a href={repository.html_url} target="_blank">{repository.name}</a>
           </h2>
@@ -42,7 +42,7 @@ function Repository({ repository }: RepositoryProps) {
             </span>
         </div>
         <p className="repo-description">{repository.description}</p>
-        <div className="d-flex">
+        <div className="d-flex flex-wrap">
           <RepositoryLanguage language={repository.language}/>
           <p className="repo-update">Updated at {formattedUpdatedAt}</p>
         </div>

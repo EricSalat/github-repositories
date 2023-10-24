@@ -1,12 +1,12 @@
 .repo-title {
-    color: #6e24ff;
+    color: var(--mainColor);
     font-size: 20px;
     font-weight: 600;
     font-family: var(--mainFont);
 }
 
 .repo-title a {
-    color: #6e24ff
+    color: var(--mainColor)
 }
 
 .repo-description,
@@ -24,7 +24,6 @@
 
 .repo-visibility {
     font-weight: 600;
-    
     padding: 0px 4px;
     margin-bottom: 8px;
     margin-left: 10px;
@@ -43,9 +42,9 @@ a {
 .repo-layout {
     border-radius: 5px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-    border: solid 1px var(--headerBackground);
+    border: solid 1px var(--auxiliarColor);
     background-color: #fff;
-    box-shadow: var(--headerBackground) 5px 6px 0px 1px;
+    box-shadow: var(--auxiliarColor) 5px 6px 0px 1px;
 }
 
 .repo-language {

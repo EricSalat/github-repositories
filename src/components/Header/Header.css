@@ -1,6 +1,6 @@
 header {
-    background-color: var(--headerBackground);
-    border-radius: 15px 15px 0 0;
+    background-color: var(--auxiliarColor);
+    border-radius: 13px 13px 0 0;
 }
 
 .header-username, .header-repositories {

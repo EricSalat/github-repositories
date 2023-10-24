@@ -8,7 +8,7 @@ interface SearchBarProps {
 function SearchBar({ searchTerm, onChange }: SearchBarProps) {
     return (
 
-            <div className="search-box">
+            <div className="search-box d-flex">
                 <input
                     className="search-input"
                     type="text"

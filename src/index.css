@@ -17,14 +17,13 @@
 
 :root {
   --background:#b8e2f2;
-  --background2: #dadada;
-  --repo-names: #1e76dd;
   --text:#373a3f;
   --secondaryText: #656d76;
-  /* --mainFont: 'Open Sans', sans-serif; */
   --mainFont: 'Inter', sans-serif;
   --mainBackground: #F9F9F9;
   --headerBackground: #282828;
+  --mainColor: #6e24ff;
+  --auxiliarColor: #282828;
 }
 
 p, summary {

@@ -38,7 +38,7 @@ function SearchUser({ onSubmit }: SearchUserProps) {
                 setInputValue(event.target.value)
             }
           />
-          <button className="submit-button ms-3" type="submit">Submit</button>
+          <button className="btn submit-button ms-3" type="submit">Submit</button>
         </form>
   );
 }
