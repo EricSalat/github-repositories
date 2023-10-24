@@ -11,11 +11,13 @@ interface RepositoryLanguageProps {
  * @returns {JSX.Element|null} The rendered RepositoryLanguage component, or null if the language is null.
  */
 function RepositoryLanguage({ language }: RepositoryLanguageProps) {
+    
     /** 
      * Initialize variables to store dot colors.
      * */
     var languageDotColor: string | null = "";
     var LanguageDotColorBorder: string | null = "";
+
     /**
      *  Determine dot colors based on the programming language.
      */

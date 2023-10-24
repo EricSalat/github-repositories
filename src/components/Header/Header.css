@@ -3,7 +3,8 @@ header {
     border-radius: 13px 13px 0 0;
 }
 
-.header-username, .header-repositories {
+.header-username,
+.header-repositories {
     margin-bottom: 0;
     padding-left: 10px;
     color: #ffffff;

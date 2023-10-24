@@ -1,7 +1,7 @@
-
 footer {
     margin-top: 80px;
 }
+
 footer p {
     font-family: 'Fira Code', monospace;
     color: var(--text)
@@ -10,5 +10,4 @@ footer p {
 footer p a {
     color: var(--text);
     text-decoration: underline;
-   
-;}
+}

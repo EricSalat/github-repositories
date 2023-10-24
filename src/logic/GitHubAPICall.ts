@@ -1,5 +1,5 @@
 import { Octokit } from "octokit";
-// require('dotenv').config();
+import.meta.env.VITE_GITHUB_TOKEN;
 
 /**
  * Fetches repository data for a GitHub user.
@@ -14,7 +14,6 @@ export async function fetchDataFromGitHub(username: string) {
    * The GitHub API token. It is retrieved from the environment variables.
    */
   const githubToken = import.meta.env.VITE_GITHUB_TOKEN;
-  import.meta.env.VITE_GITHUB_TOKEN;
   /**
    * Initialize an Octokit instance with the provided GitHub token.
    *

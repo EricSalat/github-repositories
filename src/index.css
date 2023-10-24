@@ -1,11 +1,8 @@
 /*Import normalize library to unify the default css in all the browsers*/
 @import "../node_modules/normalize.css/normalize.css";
 
-/*Import Open Sans and Inter font and Fira Code*/
-
-  @import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Inter:wght@300;400;500;600;700;800&family=Open+Sans:wght@300;400;500;600;700&display=swap');
-
-
+/*Import Open Sans, Inter and Fira Code fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Inter:wght@300;400;500;600;700;800&family=Open+Sans:wght@300;400;500;600;700&display=swap');
 
 
 * {
@@ -16,18 +13,17 @@
 }
 
 :root {
-  --background:#b8e2f2;
-  --text:#373a3f;
+  --text: #373a3f;
   --secondaryText: #656d76;
   --mainFont: 'Inter', sans-serif;
-  --mainBackground: #F9F9F9;
-  --headerBackground: #282828;
   --mainColor: #6e24ff;
   --auxiliarColor: #282828;
+  --mainBackground: #F9F9F9;
   --buttonPadding: 10px 15px 10px 15px;
 }
 
-p, summary {
+p,
+summary {
   font-family: var(--mainFont);
   font-weight: 500;
 }

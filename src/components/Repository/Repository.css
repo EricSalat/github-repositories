@@ -35,8 +35,9 @@
 
 
 h2 {
-    padding-bottom:0;
+    padding-bottom: 0;
 }
+
 a {
     text-decoration: none;
 }
@@ -53,12 +54,12 @@ a {
     padding: 0;
     margin-right: 10px;
 }
-  
+
 
 .repo-language-color {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  border: 1px solid grey;
-  margin-right: 5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1px solid grey;
+    margin-right: 5px;
 }

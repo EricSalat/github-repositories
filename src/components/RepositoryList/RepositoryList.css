@@ -6,5 +6,5 @@
 }
 
 .clear-button:hover {
-    transition: transform 200ms,background 200ms;
+    transition: transform 200ms, background 200ms;
 }
