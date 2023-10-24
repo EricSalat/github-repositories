@@ -65,3 +65,4 @@ There are many things that could be improved with time and resources.
 - Add a specific error message for when a non-existent username is entered in the search bar.
 - Include more programming languages in the legend or develop a feature to show only those programming languages that the user's API contains.
 - Export JSDocs documentation into an HTML format.
+- Unit testing with Jest and React Testing Library.
