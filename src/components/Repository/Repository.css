@@ -3,6 +3,7 @@
     font-size: 20px;
     font-weight: 600;
     font-family: var(--mainFont);
+    margin-right: 10px;
 }
 
 .repo-title a {
@@ -26,11 +27,12 @@
     font-weight: 600;
     padding: 0px 4px;
     margin-bottom: 8px;
-    margin-left: 10px;
     border: 1px solid var(--secondaryText);
     border-radius: 8px;
     font-size: 10px;
 }
+
+
 
 h2 {
     padding-bottom:0;
