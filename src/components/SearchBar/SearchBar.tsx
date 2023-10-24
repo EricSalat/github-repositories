@@ -12,7 +12,7 @@ function SearchBar({ searchTerm, onChange }: SearchBarProps) {
                 <input
                     className="search-input"
                     type="text"
-                    placeholder="Search by repository name..."
+                    placeholder="Search by repository..."
                     value={searchTerm}
                     onChange={onChange}
                 />

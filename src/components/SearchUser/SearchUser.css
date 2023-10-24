@@ -6,16 +6,16 @@
     background-color: #fff;
     border: solid 1px var(--auxiliarColor);
     font-size: 16px;
-    padding: 10px 15px 10px 15px;
+    padding: var(--buttonPadding);
     height: 40px;
     
 }
 
 .submit-button {
     height: 40px;
-    padding: 10px 15px 10px 15px;
-    border-color: var(--mainColor);
-    border-style: solid;
+    border: 1px solid var(--mainColor);
+    border-radius: 0px;
+    padding: 7px 15px 10px 15px;
     font-weight: 600;
     color: #fff;
     background-color: var(--mainColor);
@@ -23,6 +23,5 @@
 
 .submit-button:hover {
     border: 1px solid grey;
-    background-color: transparent;
-    color: #000;
+    background-color: #fff;
 }

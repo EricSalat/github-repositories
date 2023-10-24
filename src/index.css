@@ -24,6 +24,7 @@
   --headerBackground: #282828;
   --mainColor: #6e24ff;
   --auxiliarColor: #282828;
+  --buttonPadding: 10px 15px 10px 15px;
 }
 
 p, summary {
