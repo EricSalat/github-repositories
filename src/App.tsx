@@ -1,9 +1,8 @@
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.bundle';
-
-import RepositoryLayout from './components/RepositoryLayout/RepositoryLayout';
-import Footer from "./components/Footer/Footer";
+import { RepositoryLayout } from './components/RepositoryLayout/RepositoryLayout';
+import { Footer } from "./components/Footer/Footer";
 
 /**
  * The main component of the application.
@@ -16,11 +15,11 @@ function App() {
   return (
     <div className="app-layout d-flex flex-column">
       <div className="container main-container ">
-          <RepositoryLayout />
+        <RepositoryLayout />
       </div>
-          <Footer />
+      <Footer />
     </div>
   )
 }
 
-export default App
+export { App };

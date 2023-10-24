@@ -1,0 +1,9 @@
+{
+    "compilerOptions": {
+      "target": "ES6",
+      "module": "CommonJS",
+      "out": "docs/",
+      "exclude": ["node_modules"]
+    },
+    "include": ["src/**/*.ts", "src/**/*.tsx"]
+  }

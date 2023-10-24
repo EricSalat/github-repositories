@@ -8,17 +8,17 @@ interface SearchBarProps {
 function SearchBar({ searchTerm, onChange }: SearchBarProps) {
     return (
 
-            <div className="search-box d-flex">
-                <input
-                    className="search-input"
-                    type="text"
-                    placeholder="Search by repository..."
-                    value={searchTerm}
-                    onChange={onChange}
-                />
-            </div>
+        <div className="search-box d-flex">
+            <input
+                className="search-input"
+                type="text"
+                placeholder="Search by repository..."
+                value={searchTerm}
+                onChange={onChange}
+            />
+        </div>
 
     );
 }
 
-export default SearchBar;
+export { SearchBar };

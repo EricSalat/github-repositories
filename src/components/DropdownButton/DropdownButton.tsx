@@ -1,20 +1,29 @@
 import "./DropdownButton.css";
-import  { useState } from "react";
+import { useState } from "react";
 
 interface DropdownButtonProps {
     onLanguageSelect: (language: string) => void;
 }
 
+/**
+ * DropdownButton component for selecting a programming language.
+ * @component
+ * @param {DropdownButtonProps} props - The properties for the DropdownButton component.
+ * @returns {JSX.Element} The rendered DropdownButton component.
+ */
 const DropdownButton: React.FC<DropdownButtonProps> = ({ onLanguageSelect }) => {
-    // const [selectedLanguage, setSelectedLanguage] = useState<string>("");
     const setSelectedLanguage = useState<string>("")[1];
 
+    /**
+     * Handles the selection of a programming language and triggers the onLanguageSelect callback.
+     * @param {string} language - The selected programming language.
+     */
     const handleLanguageSelect = (language: string) => {
         setSelectedLanguage(language);
         onLanguageSelect(language);
     };
 
- 
+
     return (
         <div className="text-center d-flex align-self-center ps-4">
             <div className="btn-group">
@@ -69,4 +78,4 @@ const DropdownButton: React.FC<DropdownButtonProps> = ({ onLanguageSelect }) => 
     );
 };
 
-export default DropdownButton;
+export { DropdownButton };
