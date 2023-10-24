@@ -1,3 +1,9 @@
 .app-layout {
-    background-color: var(--mainBackground)
+    background-color: var(--mainBackground);
+    min-height: 100vh;
 }
+
+.main-container {
+    flex: 1;
+}
+

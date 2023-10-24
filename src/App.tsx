@@ -14,11 +14,11 @@ import Footer from "./components/Footer/Footer";
 function App() {
 
   return (
-    <div className="app-layout">
-      <div className="container">
+    <div className="app-layout d-flex flex-column">
+      <div className="container main-container ">
           <RepositoryLayout />
-          <Footer />
       </div>
+          <Footer />
     </div>
   )
 }
